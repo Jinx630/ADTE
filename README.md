@@ -1,3 +1,18 @@
+# Adaptive Debiasing Tsallis Entropy for Test-Time Adaptation.
+
+## Introduction
+
+This repo officially implements **Adaptive Debiasing Tsallis Entropy for Test-Time Adaptation.**.
+
+[[Paperswithcode](https://paperswithcode.com/paper/tai-text-as-image-for-multi-label-image)] [ICLR2026]
+
+
+<center>
+<img src="comparison.png">
+
+Fig.1: (a) VLM bias, showing higher confidence and accuracy for head classes and lower confidence and accuracy for tail classes. (b) The standard Shannon Entropy~(SE)-based method is widely used in TTA. (c) and (d) Our proposed method, which uses Tsallis Entropy~(TE) and Adaptive Debiasing Tsallis Entropy~(ADTE) for selecting high-confidence views.
+</center>
+
 ## Dataset dir:
 
 ```
