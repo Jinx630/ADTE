@@ -14,16 +14,28 @@ Dataset download and setup can be referred at [CoOp](https://github.com/KaiyangZ
 
 ## Run:
 
-ImageNet-A, **ADTE**, hand-crafted templates, ViT-B/16:
+ImageNet-A, **Zero-shot CLIP**, hand-crafted templates, ViT-B/16:
+
+```
+python run.py --set_id=A --gpu=0 --is_zero --arch=ViT-B/16 --templates
+```
+
+ImageNet-A, **Shannon Entropy**, hand-crafted templates, ViT-B/16:
+
+```
+python run.py --set_id=A --gpu=0 --arch=ViT-B/16 --templates
+```
+
+ImageNet-A, **Tsallis Entropy (q=0.1)**, hand-crafted templates, ViT-B/16:
+
+```
+python run.py --set_id=A --gpu=0 --same_q --scale_w=0.1 --arch=ViT-B/16 --templates
+```
+
+ImageNet-A, **Adaptive Debiasing Tsallis Entropy**, hand-crafted templates, ViT-B/16:
 
 ```
 python run.py --set_id=A --gpu=0 --use_adte --arch=ViT-B/16 --templates --q_path=bias_pt/imagenet_A_q_1_10_ensemble_B16.pt
-```
-
-ImageNet-A, **TE(q=0.1)**, text descriptions, ViT-L/14:
-
-```
-python run.py --set_id=A --gpu=0 --same_w=1 --scale_w=0.1 --arch=ViT-L/14 --cupl --q_path=bias_pt/imagenet_A_q_1_10_cupl_L14.pt
 ```
 
 ## Code:
